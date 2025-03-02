@@ -8,7 +8,7 @@ export default function Header(){
                 <h1>LoGo</h1>
             </div>
             
-            <ul className="flex ">
+            <ul className="sm:flex hidden">
                 <li className="pr-8">Home</li>
                 <li className="pr-8">Contact</li>
                 <li className="pr-8">About</li>
@@ -19,7 +19,7 @@ export default function Header(){
             
        
 
-        <div className="flex gap-10">
+        <div className="flex text-xl font-bold gap-10">
             <button>
 
             Login

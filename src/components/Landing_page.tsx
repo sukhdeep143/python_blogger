@@ -10,10 +10,8 @@ export default function Landing_page() {
         <Text_on_the_imagebg />
         
       </div>
-      <div className="">
-
       <Damo_blog />
-      </div>
+      
     </main>
   );
 }
