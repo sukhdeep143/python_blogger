@@ -3,7 +3,7 @@
 
 export default function Header(){
     return(
-        <main className="flex justify-between pr-5 pl-5 pt-2 items-center">
+        <main className="flex justify-between pr-5 pl-5 pt-3 items-center">
             <div>
                 <h1>LoGo</h1>
             </div>
@@ -16,7 +16,7 @@ export default function Header(){
 
             </ul>
 
-            <input type="search"  placeholder="Search here..." className="border p-2 rounded-lg " />
+            
        
 
         <div className="flex gap-10">
@@ -25,7 +25,7 @@ export default function Header(){
             Login
             </button>
         
-            <button className="p-1.5 bg-white text-black rounded-lg">
+            <button className="p-1.5 bg-amber-50/75 text-black rounded-lg">
 
             Sign Up
             </button>
