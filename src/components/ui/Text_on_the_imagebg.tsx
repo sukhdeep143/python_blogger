@@ -1,8 +1,12 @@
 import Image from "next/image";
+
 export default function Text_on_the_imagebg() {
   return (
-    <main className="overflow-hidden">
-      <div className="flex flex-col justify-center absolute bottom-10 sm:justify-between max-w-screen-xl w-full items-center mx-auto left-0 right-0">
+    <main className="overflow-hidden ">
+      <div className="flex flex-col justify-center absolute bottom-20  sm:justify-between max-w-screen-xl w-full items-center mx-auto left-0 right-0">
+          <div className="font-bold text-pink-600 sm:hidden top-10 ">
+            LOGO 
+          </div>
         <div className="items-center p-10 text-orange-700">
           <h1 className="font-bold text-2xl  text-center ">
             Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -10,7 +14,7 @@ export default function Text_on_the_imagebg() {
           <p className="text-center">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab sapiente
             ea qui ullam odio nemo, ipsa incidunt temporibus repellendus et quia
-            libero magni sit l
+            libero magni sit.
           </p>
         </div>
         <div>
