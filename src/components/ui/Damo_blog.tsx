@@ -11,11 +11,11 @@ export default function Damo_blog() {
         </p>
       </div>
 
-      <div className="grid sm:grid-cols-3 gap-y-10  place-items-center">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-10  place-items-center">
         <div className="border rounded-3xl shadow-lg p-4 pb-5  grid-cols-2  max-w-sm bg-white ">
           {/* Image */}
           <Image
-            src="/walking.webp"
+            src="/sunSet.webp"
             width={300}
             height={200}
             alt="Post Image"
@@ -73,7 +73,7 @@ export default function Damo_blog() {
         <div className="border rounded-3xl shadow-lg p-4  grid-cols-2  max-w-sm bg-white">
           {/* Image */}
           <Image
-            src="/walking.webp"
+            src="/mainBg.webp"
             width={300}
             height={200}
             alt="Post Image"
@@ -102,7 +102,7 @@ export default function Damo_blog() {
         <div className="border rounded-3xl shadow-lg p-4  grid-cols-2  max-w-sm bg-white">
           {/* Image */}
           <Image
-            src="/walking.webp"
+            src="/mainBg.webp"
             width={300}
             height={200}
             alt="Post Image"
@@ -131,7 +131,7 @@ export default function Damo_blog() {
         <div className="border rounded-3xl shadow-lg p-4  grid-cols-2  max-w-sm bg-white">
           {/* Image */}
           <Image
-            src="/walking.webp"
+            src="/sunSet.webp"
             width={300}
             height={200}
             alt="Post Image"
