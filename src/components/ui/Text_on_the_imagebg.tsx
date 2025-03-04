@@ -1,8 +1,11 @@
 import Image from "next/image";
+// import { motion } from "framer-motion";
+
 
 export default function Text_on_the_imagebg() {
   return (
     <main className="overflow-hidden ">
+  
       <div className="flex flex-col justify-center absolute bottom-20  sm:justify-between max-w-screen-xl w-full items-center mx-auto left-0 right-0">
           <div className="font-bold text-pink-600 sm:hidden top-10 ">
             LOGO 
