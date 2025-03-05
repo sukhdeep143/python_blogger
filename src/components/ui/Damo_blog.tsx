@@ -18,11 +18,11 @@ export default function BlogPosts() {
   ];
 
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-10 place-items-center">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-y-10 p-5 place-items-center ">
       {posts.map((post, index) => (
         <motion.div
           key={index}
-          className="border rounded-3xl shadow-lg p-4 pb-5 max-w-sm bg-white"
+          className="border rounded-3xl shadow-lg p-4 pb-5 max-w-sm bg-white cursor-pointer"
           variants={cardVariants}
           initial="hidden"
           whileInView="visible"
