@@ -14,7 +14,7 @@ export default function Landing_page() {
       </div>
       <Infro />
       <Damo_blog />
-      <Footer />
+  
       
     </main>
   );
