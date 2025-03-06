@@ -1,4 +1,4 @@
-
+import Link from "next/link";
 
 
 export default function Header(){
@@ -9,7 +9,12 @@ export default function Header(){
             </div>
             
             <ul className="sm:flex hidden">
+               <Link
+               href="/home"
+               >
                 <li className="pr-8 sm:text-xl font-bold cursor-pointer hover:text-amber-700 hover:scale-110 transition-transform duration-300 ease-in-out ">Home</li>
+               </Link>
+               
                 <li className="pr-8 sm:text-xl font-bold cursor-pointer hover:text-amber-700 hover:scale-110 transition-transform duration-300 ease-in-out ">Contact</li>
                 <li className="pr-8 sm:text-xl font-bold cursor-pointer hover:text-amber-700 hover:scale-110 transition-transform duration-300 ease-in-out ">About</li>
                 <li className="pr-8 sm:text-xl font-bold cursor-pointer hover:text-amber-700 hover:scale-110 transition-transform duration-300 ease-in-out ">Blog</li>

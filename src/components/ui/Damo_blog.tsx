@@ -7,7 +7,7 @@ const cardVariants = {
   visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-export default function BlogPosts() {
+export default function Damo_blog() {
   const posts = [
     { img: "/sunSet.webp", title: "Capturing the Perfect Sunset", time: "5 min" },
     { img: "/walking.webp", title: "A Peaceful Evening Walk", time: "10 min" },
