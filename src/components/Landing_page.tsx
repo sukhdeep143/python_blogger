@@ -1,7 +1,6 @@
 import Header from "@/components/ui/Header";
 import Text_on_the_imagebg from "./ui/Text_on_the_imagebg";
 import Damo_blog from "./ui/Damo_blog";
-import Footer from "./ui/Footer";
 import Infro from "./ui/Infro";
 
 export default function Landing_page() {
