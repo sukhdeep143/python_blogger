@@ -1,6 +1,7 @@
 import Header from "@/components/ui/Header";
 import Text_on_the_imagebg from "./ui/Text_on_the_imagebg";
 import Damo_blog from "./ui/Damo_blog";
+import Link from "next/link";
 import Infro from "./ui/Infro";
 
 export default function Landing_page() {
@@ -12,7 +13,9 @@ export default function Landing_page() {
         
       </div>
       <Infro />
+       <Link href="/Sign_Up">
       <Damo_blog />
+            </Link>
   
       
     </main>

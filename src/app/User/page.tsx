@@ -10,7 +10,18 @@ export default function user(){
               LoGo
             </h1>
           </div>
+          <Link href="/home">
+          <h1 className="pr-8 sm:text-xl font-bold cursor-pointer hover:text-amber-700 hover:scale-110 transition-transform duration-300 ease-in-out ">
+          <Image 
+            src={"/home.png"}
+            height={20}
+            width={20}
+            alt="Home"
+            />
+          </h1>
+        </Link>
           <div>
+            
             <Link
             href="/write_An_Post">
             <Image 
