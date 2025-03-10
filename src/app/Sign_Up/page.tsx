@@ -35,7 +35,7 @@ export default function SignUp() {
         setMessage(data.message);
         
         if (response.ok) {
-          setTimeout(() => router.push("/login"), 2000);
+          setTimeout(() => router.push("/Login"), 2000);
         }
       } catch (error) {
         console.error("Signup Error:", error);

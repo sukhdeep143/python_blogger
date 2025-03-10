@@ -13,12 +13,12 @@ export default function Login() {
 
   const formik = useFormik({
     initialValues: {
-      usernameOrEmail: "",
+      usernameOrEmail: "", // Updated field to accept both username or email
       password: "",
     },
     validationSchema: Yup.object({
-      usernameOrEmail: Yup.string().required("Required"),
-      password: Yup.string().required("Required"),
+      usernameOrEmail: Yup.string().required("Email or Username is required"),
+      password: Yup.string().required("Password is required"),
     }),
     onSubmit: async (values) => {
       try {
@@ -32,8 +32,8 @@ export default function Login() {
         setMessage(data.message);
 
         if (response.ok) {
-          localStorage.setItem("usernameOrEmail", values.usernameOrEmail);
-          router.push("/User");
+          localStorage.setItem("userEmail", data.email); // Store email from response
+          router.push("/User"); // Redirect to User page
         }
       } catch (error) {
         console.error(error);
@@ -43,18 +43,26 @@ export default function Login() {
   });
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 mb-10 bg-white rounded-lg shadow">
+    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow">
       <h2 className="text-xl font-bold mb-4">Login</h2>
-      <form onSubmit={formik.handleSubmit} className="space-y-4">
-        <Input type="text" placeholder="Username or Email" {...formik.getFieldProps("usernameOrEmail")} />
-        {formik.touched.usernameOrEmail && formik.errors.usernameOrEmail && (
-          <p className="text-red-500 ">{formik.errors.usernameOrEmail}</p>
-        )}
+      <form onSubmit={formik.handleSubmit}>
+        <Input
+          type="text"
+          placeholder="Email or Username"
+          {...formik.getFieldProps("usernameOrEmail")}
+        />
+        {formik.touched.usernameOrEmail && formik.errors.usernameOrEmail ? (
+          <p className="text-red-500">{formik.errors.usernameOrEmail}</p>
+        ) : null}
 
-        <Input type="password" placeholder="Password" {...formik.getFieldProps("password")} />
-        {formik.touched.password && formik.errors.password && (
+        <Input
+          type="password"
+          placeholder="Password"
+          {...formik.getFieldProps("password")}
+        />
+        {formik.touched.password && formik.errors.password ? (
           <p className="text-red-500">{formik.errors.password}</p>
-        )}
+        ) : null}
 
         <Button type="submit" className="w-full mt-4">Login</Button>
       </form>
