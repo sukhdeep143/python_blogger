@@ -46,6 +46,9 @@ export default function User() {
   }, []);
 
   return (
+    <div>
+
+   
     <main className="flex justify-between items-center p-5 bg-white/25 backdrop-blur sticky top-0 shadow-md">
       {/* Logo */}
       <div>
@@ -79,13 +82,7 @@ export default function User() {
 
       {/* User Profile */}
       <div className="flex items-center gap-3">
-        {loading ? (
-          <span className="text-gray-500">Loading...</span>
-        ) : error ? (
-          <span className="text-red-500">{error}</span>
-        ) : (
-          <span className="font-bold text-lg">Hello, {username}</span>
-        )}
+        
 
         <Link href="/User">
           <Image
@@ -98,5 +95,15 @@ export default function User() {
         </Link>
       </div>
     </main>
+      <div className="text-center pt-10">
+      {loading ? (
+          <span className="text-gray-500">Loading...</span>
+        ) : error ? (
+          <span className="text-red-500">{error}</span>
+        ) : (
+          <span className="font-bold text-lg">Hello, {username}</span>
+        )}
+      </div>
+    </div>
   );
 }
