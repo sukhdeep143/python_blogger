@@ -43,8 +43,8 @@ export default function Login() {
   });
 
   return (
-    <div className="max-w-md mx-auto mt-10 p-6 bg-white rounded-lg shadow">
-      <h2 className="text-xl font-bold mb-4">Login</h2>
+    <div className="max-w-md mx-auto mt-10 p-6 m-5  bg-white rounded-lg shadow">
+      <h2 className="text-xl font-bold   mb-4">Login</h2>
       <form onSubmit={formik.handleSubmit}>
         <Input
           type="text"
@@ -52,16 +52,17 @@ export default function Login() {
           {...formik.getFieldProps("usernameOrEmail")}
         />
         {formik.touched.usernameOrEmail && formik.errors.usernameOrEmail ? (
-          <p className="text-red-500">{formik.errors.usernameOrEmail}</p>
+          <p className="text-red-500  ">{formik.errors.usernameOrEmail}</p>
         ) : null}
 
         <Input
           type="password"
           placeholder="Password"
           {...formik.getFieldProps("password")}
+          
         />
         {formik.touched.password && formik.errors.password ? (
-          <p className="text-red-500">{formik.errors.password}</p>
+          <p className="text-red-500  ">{formik.errors.password}</p>
         ) : null}
 
         <Button type="submit" className="w-full mt-4">Login</Button>
