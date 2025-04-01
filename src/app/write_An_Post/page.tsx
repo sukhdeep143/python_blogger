@@ -1,5 +1,3 @@
-// 📌 Frontend: Next.js (Save this as CreatePost.tsx inside your Next.js project)
-
 'use client';
 
 import { useState } from 'react';
