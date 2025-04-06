@@ -7,6 +7,10 @@ import * as Yup from "yup";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Suspense } from 'react'
+import LoadingSpinner from "../loading";
+
+
 
 export default function SignUp() {
   const [message, setMessage] = useState("");
@@ -45,6 +49,8 @@ export default function SignUp() {
   });
 
   return (
+          <Suspense fallback={<p><LoadingSpinner /></p>}>
+    
     <div className="max-w-md mx-auto mt-10 p-6 mb-10 bg-white rounded-lg shadow">
       <h2 className="text-xl font-bold mb-4">Sign Up</h2>
       <form onSubmit={formik.handleSubmit} className="space-y-4">
@@ -75,5 +81,7 @@ export default function SignUp() {
         </Link>
       </p>
     </div>
+          </Suspense>
+    
   );
 }
