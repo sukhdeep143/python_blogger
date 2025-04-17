@@ -15,7 +15,7 @@ export default function Post() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch("http://localhost:5000/get_posts");
+        const response = await fetch("https://python-backend-2sqb.onrender.com/get_posts");
         const data = await response.json();
         setPosts(data);
       } catch (error) {

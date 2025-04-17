@@ -31,11 +31,11 @@ export default function CreatePost() {
     formData.append('image', image);
     
     try {
-      const response = await fetch('http://localhost:5000/create_post', {
+      const response = await fetch('https://python-backend-2sqb.onrender.com/create_post', {
         method: 'POST',
         body: formData,
       });
-
+    
       const result = await response.json();
 
       if (response.ok) {
