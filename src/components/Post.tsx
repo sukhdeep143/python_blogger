@@ -37,7 +37,7 @@ export default function Post() {
             <p className="text-gray-700">{post.paragraph}</p>
             <div className="mt-4 flex justify-center">
               <Image
-                src={`http://localhost:5000${post.image_path.startsWith("/") ? post.image_path : `/${post.image_path}`}`}
+                src={`https://python-backend-2sqb.onrender.com${post.image_path.startsWith("/") ? post.image_path : `/${post.image_path}`}`}
                 // Correctly load images from backend
                 alt="Post Image"
                 width={300}
