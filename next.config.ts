@@ -5,8 +5,13 @@ const nextConfig = {
       {
         protocol: 'http',
         hostname: 'localhost',
-        port: '5000', // Adjust the port if needed
-        pathname: '/uploads/**', // Allow images from the uploads folder
+        port: '5000',
+        pathname: '/uploads/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'python-backend-2sqb.onrender.com',
+        pathname: '/**',
       },
     ],
   },
