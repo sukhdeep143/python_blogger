@@ -88,7 +88,7 @@ export default function Login() {
       </main>
 
       
-      <div className="max-w-md mx-auto mt-10 p-6 m-5 bg-white rounded-lg shadow">
+      <div className="max-w-md mx-auto mt-10 p-6 m-5 bg-white rounded-lg shadow ">
         <h2 className="text-xl font-bold mb-4">Login</h2>
         <form onSubmit={formik.handleSubmit}>
           <Input

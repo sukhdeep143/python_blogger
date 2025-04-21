@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
+import Header from '@/components/ui/Header';
 
 export default function CreatePost() {
   const [title, setTitle] = useState('');
@@ -54,7 +55,12 @@ export default function CreatePost() {
   };
 
   return (
-    <div className="max-w-lg mx-auto p-6 bg-white shadow rounded-lg">
+    <div >
+
+      <Header  />
+      <div className='pt-14 pb-14 shadow-2xl'>
+
+    <div className="max-w-lg mx-auto p-6 bg-white shadow rounded-lg ">
       <h2 className="text-xl font-bold mb-4">Create a New Post</h2>
       <form onSubmit={handleSubmit} className="space-y-4">
         <div>
@@ -82,10 +88,10 @@ export default function CreatePost() {
             type="file" 
             onChange={handleImageChange} 
             className="w-full border p-2 rounded"
-          />
+            />
           {imagePreview && (
             <Image 
-              src={imagePreview} 
+            src={imagePreview} 
               alt="Preview" 
               width={160} 
               height={160} 
@@ -97,10 +103,12 @@ export default function CreatePost() {
         <button 
           type="submit" 
           className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
-        >
+          >
           Submit Post
         </button>
       </form>
     </div>
+      </div>
+          </div>
   );
 }

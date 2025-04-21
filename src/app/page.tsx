@@ -8,7 +8,7 @@ import { Suspense } from 'react'
 export default function Home() {
   return (
     
-    <main className=" " >
+    <main className=" min-h-screen" >
       
 
       <Suspense fallback={<p><LoadingSpinner /></p>}>

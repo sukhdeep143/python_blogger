@@ -46,14 +46,19 @@ export default function User() {
   }, []);
 
   return (
-    <div>
+    <div className="">
 
    
-    <main className="flex justify-between items-center p-5 bg-white/25 backdrop-blur sticky top-0 shadow-md">
+    <main className="flex justify-between items-center p-5 bg-slate-200/25 backdrop-blur sticky top-0 shadow-md">
       {/* Logo */}
       <div>
         <h1 className="pr-8 sm:text-xl font-bold cursor-pointer hover:text-amber-700 hover:scale-110 transition-transform">
-          LoGo
+          <Image 
+          src={"/logo.png"}
+          width={50}
+          height={50}
+          alt="Logo"
+          className="rounded-xl"/>
         </h1>
       </div>
 
@@ -95,7 +100,7 @@ export default function User() {
         </Link>
       </div>
     </main>
-      <div className="text-center pt-10">
+      <div className="text-center pt-10 p-10">
       {loading ? (
           <span className="text-gray-500">Loading...</span>
         ) : error ? (

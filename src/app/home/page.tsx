@@ -29,7 +29,7 @@ export default function Home() {
     <main>
       {loading && <Loading />}
 
-      <header className="flex justify-between p-5 bg-white/25 backdrop-blur items-center sticky top-0">
+      <header className="flex justify-between bg-slate-200/25 p-5  backdrop-blur items-center sticky top-0">
         <div>
           <h1 className="pr-8 sm:text-xl font-bold cursor-pointer hover:text-amber-700 hover:scale-110 transition-transform duration-300 ease-in-out">
             LoGo
