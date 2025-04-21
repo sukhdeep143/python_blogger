@@ -1,21 +1,26 @@
 import React from "react";
 import Image from "next/image";
-import Header from "@/components/ui/Header";
 
 function AboutPage() {
   return (
     <div className="font-sans  text-center">
-        <Header />
+      <main className="flex justify-between pr-5 pl-5 bg-slate-300  p-5 rounded-2xl  items-center">
+        <div>
+          <h1 className="pr-8 sm:text-xl font-bold cursor-pointer hover:text-purple-500 hover:scale-110 transition-transform duration-300 ease-in-out ">
+            <Image
+              src={"/logo.png"}
+              width={50}
+              height={50}
+              alt="Make your thought heard logo"
+              className="rounded-xl"
+            />
+          </h1>
+        </div>
+      </main>
       {/* Top Section */}
       <section className=" relative overflow-hidden flex flex-col md:flex-row items-center justify-between p-8 md:p-16">
         <div className="max-w-xl">
-        
-
-         
-
           <div className="pt-5 px-4 md:px-10 max-w-4xl mx-auto">
-            
-
             <section className="mb-8">
               <h2 className="text-2xl font-semibold  text-purple-800 mb-3">
                 👨‍💻 About This Website
@@ -34,9 +39,9 @@ function AboutPage() {
 
             <section>
               <h2 className="text-2xl font-semibold mb-3">
-              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-purple-800">
-              Sukhdeep Singh
-            </h1>
+                <h1 className="text-4xl md:text-5xl font-bold mb-6 text-purple-800">
+                  Sukhdeep Singh
+                </h1>
               </h2>
               <p className="text-lg leading-relaxed text-gray-700 mb-3">
                 I`m a <strong>MERN stack developer</strong> with experience in
@@ -84,8 +89,6 @@ function AboutPage() {
           />
         </div>
       </section>
-
-     
     </div>
   );
 }

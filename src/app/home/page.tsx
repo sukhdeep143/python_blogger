@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useEffect, useState } from "react";
 import Post from "@/components/Post";
 import Image from "next/image";
@@ -29,17 +29,31 @@ export default function Home() {
     <main>
       {loading && <Loading />}
 
-      <header className="flex justify-between bg-slate-200/25 p-5  backdrop-blur items-center sticky top-0">
+      <header className="flex justify-between bg-slate-500/25 p-5  backdrop-blur items-center sticky top-0">
         <div>
-          <h1 className="pr-8 sm:text-xl font-bold cursor-pointer hover:text-amber-700 hover:scale-110 transition-transform duration-300 ease-in-out">
-            LoGo
-          </h1>
+          <Image
+            src="/logo.png"
+            width={50}
+            height={50}
+            alt="Logo"
+            className="rounded-2xl"
+          />
         </div>
+        
 
         <Link href="/home">
           <h1 className="pr-8 sm:text-xl font-bold cursor-pointer hover:text-amber-700 hover:scale-110 transition-transform duration-300 ease-in-out">
             <Image src={"/home.png"} height={20} width={20} alt="Home" />
           </h1>
+        </Link>
+        <Link href="/write_An_Post">
+          <Image
+            src="/write_an_post.png"
+            height={24}
+            width={24}
+            alt="Write post"
+            className="cursor-pointer hover:scale-110 transition-transform"
+          />
         </Link>
 
         <Link href="/User">
@@ -50,6 +64,7 @@ export default function Home() {
             alt="User Profile"
           />
         </Link>
+        
       </header>
 
       {/* Show Posts Only When Not Loading */}

@@ -6,6 +6,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 import Link from "next/link";
 
 // 🔄 Small Loading Spinner
@@ -66,30 +67,18 @@ export default function SignUp() {
 
   return (
     <div className="relative">
-      <main className="flex justify-between pr-5 pl-5 pt-3 items-center">
+      <main className="flex justify-between pr-5 pl-5 pt-3 pb-3 bg-slate-200 items-center">
         <div>
-          <h1 className="pr-8 sm:text-xl font-bold cursor-pointer hover:text-amber-700 hover:scale-110 transition-transform duration-300 ease-in-out ">
-            LoGo
-          </h1>
+          <Image
+            src="/logo.png"
+            width={50}
+            height={50}
+            alt="Logo"
+            className="rounded-2xl"
+          />
         </div>
 
-        <ul className="sm:flex hidden">
-          {/* <Link
-               href="/home"
-               >
-                <li className="pr-8 sm:text-xl font-bold cursor-pointer hover:text-amber-700 hover:scale-110 transition-transform duration-300 ease-in-out ">Home</li>
-               </Link> */}
-
-          <li className="pr-8 sm:text-xl font-bold cursor-pointer hover:text-amber-700 hover:scale-110 transition-transform duration-300 ease-in-out ">
-            Contact
-          </li>
-          <li className="pr-8 sm:text-xl font-bold cursor-pointer hover:text-amber-700 hover:scale-110 transition-transform duration-300 ease-in-out ">
-            About
-          </li>
-          <li className="pr-8 sm:text-xl font-bold cursor-pointer hover:text-amber-700 hover:scale-110 transition-transform duration-300 ease-in-out ">
-            Blog
-          </li>
-        </ul>
+      
       </main>
       {loading && <Loading />} {/* 🔁 Show loading spinner */}
       <div className="max-w-md mx-auto mt-10 p-6 mb-10 bg-white rounded-lg shadow">
