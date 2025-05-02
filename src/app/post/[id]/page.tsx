@@ -7,19 +7,19 @@ interface Post {
   image_path: string;
 }
 
-interface Props {
-  params: { id: string };
-}
-
-const getPost = async (id: string): Promise<Post> => {
+async function getPost(id: string): Promise<Post> {
   const res = await fetch(`https://python-backend-2sqb.onrender.com/get_post/${id}`, {
     cache: "no-store",
   });
-  if (!res.ok) throw new Error("Post not found");
-  return res.json();
-};
 
-const PostDetail = async ({ params }: Props) => {
+  if (!res.ok) {
+    throw new Error("Post not found");
+  }
+
+  return res.json();
+}
+
+export default async function Page({ params }: { params: { id: string } }) {
   const post = await getPost(params.id);
 
   return (
@@ -35,6 +35,4 @@ const PostDetail = async ({ params }: Props) => {
       <p className="text-gray-700 mt-4">{post.paragraph}</p>
     </div>
   );
-};
-
-export default PostDetail;
+}
