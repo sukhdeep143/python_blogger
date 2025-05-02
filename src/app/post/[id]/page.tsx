@@ -1,33 +1,25 @@
 // src/app/post/[id]/page.tsx
 import Image from "next/image";
 
-// Define the shape of the post data
 interface Post {
   title: string;
   paragraph: string;
   image_path: string;
 }
 
-// Define the props for this page component
-interface PostDetailPageProps {
-  params: {
-    id: string;
-  };
+interface Props {
+  params: { id: string };
 }
 
-// Fetch the post data by ID
-async function getPost(id: string): Promise<Post> {
+const getPost = async (id: string): Promise<Post> => {
   const res = await fetch(`https://python-backend-2sqb.onrender.com/get_post/${id}`, {
     cache: "no-store",
   });
-  if (!res.ok) {
-    throw new Error("Post not found");
-  }
+  if (!res.ok) throw new Error("Post not found");
   return res.json();
-}
+};
 
-// Page component
-export default async function PostDetail({ params }: PostDetailPageProps) {
+const PostDetail = async ({ params }: Props) => {
   const post = await getPost(params.id);
 
   return (
@@ -43,4 +35,6 @@ export default async function PostDetail({ params }: PostDetailPageProps) {
       <p className="text-gray-700 mt-4">{post.paragraph}</p>
     </div>
   );
-}
+};
+
+export default PostDetail;
