@@ -7,6 +7,12 @@ interface Post {
   image_path: string;
 }
 
+interface PageProps {
+  params: {
+    id: string;
+  };
+}
+
 async function getPost(id: string): Promise<Post> {
   const res = await fetch(`https://python-backend-2sqb.onrender.com/get_post/${id}`, {
     cache: "no-store",
@@ -19,7 +25,7 @@ async function getPost(id: string): Promise<Post> {
   return res.json();
 }
 
-export default async function Page({ params }: { params: { id: string } }) {
+export default async function Page({ params }: PageProps) {
   const post = await getPost(params.id);
 
   return (
