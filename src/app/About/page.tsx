@@ -3,8 +3,8 @@ import Image from "next/image";
 
 function AboutPage() {
   return (
-    <div className="font-sans  text-center">
-      <main className="flex justify-between pr-5 pl-5 bg-slate-300  p-5 rounded-2xl  items-center">
+    <div className="font-sans  text-center p-2 bg-slate-200/25">
+      <main className="flex justify-between pr-5 pl-5 bg-purple-800   p-5 rounded-2xl  items-center">
         <div>
           <h1 className="pr-8 sm:text-xl font-bold cursor-pointer hover:text-purple-500 hover:scale-110 transition-transform duration-300 ease-in-out ">
             <Image

@@ -6,7 +6,7 @@ import Infro from "./ui/Infro";
 
 export default function Landing_page() {
   return (
-    <main className="bg-white  ">
+    <main className=" bg-slate-200/25 ">
       <div className="h-screen p-1 bg-[url('/mainBg.webp')] bg-cover bg-center border-2 rounded-lg">
         <Header />
         <Text_on_the_imagebg />

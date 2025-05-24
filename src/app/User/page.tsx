@@ -46,10 +46,10 @@ export default function User() {
   }, []);
 
   return (
-    <div className="">
+    <div className="p-2  ">
 
    
-    <main className="flex justify-between items-center p-5 bg-slate-200/25 backdrop-blur sticky top-0 shadow-md">
+    <main className="flex justify-between items-center p-5 rounded-2xl bg-purple-800 backdrop-blur sticky top-0 shadow-md">
       {/* Logo */}
       <div>
         <h1 className="pr-8 sm:text-xl font-bold cursor-pointer hover:text-amber-700 hover:scale-110 transition-transform">
@@ -70,7 +70,7 @@ export default function User() {
             height={24}
             width={24}
             alt="Home"
-            className="cursor-pointer hover:scale-110 transition-transform"
+            className="cursor-pointer filter invert hover:scale-110 transition-transform"
           />
         </Link>
 
@@ -80,7 +80,7 @@ export default function User() {
             height={24}
             width={24}
             alt="Write post"
-            className="cursor-pointer hover:scale-110 transition-transform"
+            className="cursor-pointer filter invert hover:scale-110 transition-transform"
           />
         </Link>
       </div>
@@ -95,7 +95,7 @@ export default function User() {
             height={24}
             width={24}
             alt="User profile"
-            className="cursor-pointer hover:scale-110 transition-transform"
+            className="cursor-pointer  filter invert hover:scale-110 transition-transform"
           />
         </Link>
       </div>

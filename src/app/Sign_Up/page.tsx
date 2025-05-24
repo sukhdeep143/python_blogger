@@ -66,8 +66,8 @@ export default function SignUp() {
   });
 
   return (
-    <div className="relative">
-      <main className="flex justify-between pr-5 pl-5 pt-3 pb-3 bg-slate-200 items-center">
+    <div className="relative p-2 bg-slate-200/25">
+      <main className="flex justify-between bg-purple-800 p-5 rounded-2xl backdrop-blur items-center sticky top-0">
         <div>
           <Image
             src="/logo.png"

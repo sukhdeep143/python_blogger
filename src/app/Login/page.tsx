@@ -60,9 +60,9 @@ export default function Login() {
   });
 
   return (
-    <div className="relative  ">
+    <div className="relative p-2 bg-slate-200/25  ">
       {loading && <Loading />}
-      <main className="flex justify-between pr-5 pl-5 pt-3 bg-slate-200 pb-3 items-center">
+      <main className="flex justify-between bg-purple-800 p-5 rounded-2xl backdrop-blur items-center sticky top-0">
         <div>
           <Image
             src="/logo.png"

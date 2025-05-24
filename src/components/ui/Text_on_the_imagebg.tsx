@@ -43,8 +43,8 @@ export default function TextOnImageBg() {
               className="rounded-full"
             />
           </div>
-            <h1 className="cursor-default font-bold text-purple-800 sm:text-2xl">Asem Alhendi </h1>
-          <p className="font-bold cursor-default text-center text-purple-800 sm:text-md">Saudi Arabia</p>
+            <h1 className="cursor-default font-bold  sm:text-2xl">Asem Alhendi </h1>
+          <p className="font-bold cursor-default text-center  sm:text-md">Saudi Arabia</p>
           <button className="px-4 py-2 rounded-3xl text-black font-bold bg-amber-50/75 transition-all duration-300 hover:bg-amber-100 cursor-pointer">
             Description
           </button>

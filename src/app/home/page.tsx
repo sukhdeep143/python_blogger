@@ -26,10 +26,10 @@ export default function Home() {
   }, []);
 
   return (
-    <main>
+    <main className="p-2 bg-slate-200/25">
       {loading && <Loading />}
 
-      <header className="flex justify-between bg-slate-500/25 p-5  backdrop-blur items-center sticky top-0">
+      <header className="flex justify-between bg-purple-800 p-5 rounded-2xl backdrop-blur items-center sticky top-0">
         <div>
           <Image
             src="/logo.png"
@@ -43,7 +43,7 @@ export default function Home() {
 
         <Link href="/home">
           <h1 className="pr-8 sm:text-xl font-bold cursor-pointer hover:text-amber-700 hover:scale-110 transition-transform duration-300 ease-in-out">
-            <Image src={"/home.png"} height={20} width={20} alt="Home" />
+            <Image className="filter invert grayscale" src={"/home.png"} height={20} width={20} alt="Home" />
           </h1>
         </Link>
         <Link href="/write_An_Post">
@@ -52,7 +52,7 @@ export default function Home() {
             height={24}
             width={24}
             alt="Write post"
-            className="cursor-pointer hover:scale-110 transition-transform"
+            className="cursor-pointer filter invert grayscale hover:scale-110 transition-transform"
           />
         </Link>
 
@@ -62,6 +62,7 @@ export default function Home() {
             height={20}
             width={20}
             alt="User Profile"
+            className="cursor-pointer filter invert grayscale hover:scale-110 transition-transform"
           />
         </Link>
         

@@ -37,7 +37,7 @@ export default function PostCard() {
   };
 
   return (
-    <div className="max-w-5xl mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="max-w-5xl mx-auto mt-10 p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       {posts.length === 0 ? (
         <p className="text-center text-gray-500 col-span-full">No posts available.</p>
       ) : (

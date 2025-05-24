@@ -12,9 +12,9 @@ export default function Damo_blog() {
     { img: "/sunSet.webp", title: "Capturing the Perfect Sunset", time: "5 min" },
     { img: "/walking.webp", title: "A Peaceful Evening Walk", time: "10 min" },
     { img: "/mainBg.webp", title: "Exploring Nature's Beauty", time: "7 min" },
-    { img: "/mainBg.webp", title: "Moments of Tranquility", time: "2 min" },
-    { img: "/sunSet.webp", title: "Golden Hour Magic", time: "4 min" },
-    { img: "/walking.webp", title: "Finding Serenity", time: "8 min" },
+    { img: "/eye.jpg", title: "Eye color, determined by the amount", time: "2 min" },
+    { img: "/colour.avif", title: " Chameleons are fascinating", time: "4 min" },
+    { img: "/anime.jpg", title: "Anime is not a cartoon", time: "8 min" },
   ];
 
   return (
@@ -50,9 +50,7 @@ export default function Damo_blog() {
 
           {/* Paragraph (2 lines) */}
           <p className="text-gray-700 mt-2 line-clamp-2">
-            Sunsets remind us of the beauty in endings. Whether its the colors
-            or the peaceful ambiance, they create a moment of reflection and
-            tranquility.
+           Click here to log in and start writing your own blog posts, share your thoughts, and read what others are saying. Join the conversation, connect with like-minded people, and express yourself freely.
           </p>
         </motion.div>
       ))}
