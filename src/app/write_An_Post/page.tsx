@@ -9,6 +9,7 @@ export default function CreatePost() {
   const [paragraph, setParagraph] = useState("");
   const [image, setImage] = useState(null);
   const [imagePreview, setImagePreview] = useState(null);
+  const [loading, setLoading] = useState(false);
 
   const handleImageChange = (event) => {
     const file = event.target.files[0];
@@ -31,6 +32,7 @@ export default function CreatePost() {
     formData.append("paragraph", paragraph);
     formData.append("image", image);
 
+    setLoading(true);
     try {
       const response = await fetch(
         "https://python-backend-2sqb.onrender.com/create_post",
@@ -49,33 +51,48 @@ export default function CreatePost() {
         setImage(null);
         setImagePreview(null);
       } else {
-        alert(`Error: ${result.message}`);
+        alert(`Error: ${result.message || "Unknown error"}`);
       }
     } catch (error) {
       alert("Failed to submit post. Please try again.");
       console.error("Error:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
-    <div>
-      <main className="flex justify-between pr-5 pl-5 bg-slate-300  p-5 rounded-2xl  items-center">
-        <div>
-          <h1 className="pr-8 sm:text-xl font-bold cursor-pointer hover:text-purple-500 hover:scale-110 transition-transform duration-300 ease-in-out ">
-            <Image
-              src={"/logo.png"}
-              width={50}
-              height={50}
-              alt="Make your thought heard logo"
-              className="rounded-xl"
-            />
-          </h1>
-        </div>
+    <div className="p-2">
+      {/* Header */}
+      <main className="flex justify-between pr-5 pl-5 bg-purple-800 p-5 rounded-2xl items-center">
+        <Link href="/">
+          <Image
+            src={"/logo.png"}
+            width={50}
+            height={50}
+            alt="Logo"
+            className="rounded-xl cursor-pointer hover:scale-110 transition-transform"
+          />
+        </Link>
+
+        <Link href="/home">
+          <Image
+            src="/home.png"
+            height={24}
+            width={24}
+            alt="Home"
+            className="cursor-pointer filter invert hover:scale-110 transition-transform"
+          />
+        </Link>
       </main>
+
+      {/* Form */}
       <div className="pt-14 pb-14 shadow-2xl">
-        <div className="max-w-lg mx-auto p-6 bg-white shadow rounded-lg ">
+        <div className="max-w-lg mx-auto p-6 bg-white shadow rounded-lg">
           <h2 className="text-xl font-bold mb-4">Create a New Post</h2>
+
           <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Title */}
             <div>
               <label className="block font-semibold">Title</label>
               <input
@@ -83,22 +100,27 @@ export default function CreatePost() {
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 className="w-full border p-2 rounded"
+                placeholder="Enter post title"
               />
             </div>
 
+            {/* Paragraph */}
             <div>
               <label className="block font-semibold">Paragraph</label>
               <textarea
                 value={paragraph}
                 onChange={(e) => setParagraph(e.target.value)}
                 className="w-full border p-2 rounded"
+                placeholder="Write something..."
               ></textarea>
             </div>
 
+            {/* Image */}
             <div>
               <label className="block font-semibold">Upload Image</label>
               <input
                 type="file"
+                accept="image/*"
                 onChange={handleImageChange}
                 className="w-full border p-2 rounded"
               />
@@ -113,20 +135,26 @@ export default function CreatePost() {
               )}
             </div>
 
+            {/* Submit */}
             <button
               type="submit"
-              className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600"
+              disabled={loading}
+              className={`w-full ${
+                loading ? "bg-gray-400" : "bg-blue-500 hover:bg-blue-600"
+              } text-white px-4 py-2 rounded`}
             >
-              Submit Post
+              {loading ? "Posting..." : "Submit Post"}
             </button>
           </form>
         </div>
+
+        {/* Go Home */}
         <Link href="/home">
-          <h1 className="pr-8 pt-5 sm:text-xl font-bold cursor-pointer text-center hover:text-amber-700 hover:scale-110 transition-transform duration-300 ease-in-out">
-            <button className="p-2 rounded-2xl bg-purple-700 text-white ">
+          <div className="text-center mt-5">
+            <button className="p-2 rounded-2xl bg-purple-700 text-white hover:bg-purple-600 transition">
               Go To Home Page
             </button>
-          </h1>
+          </div>
         </Link>
       </div>
     </div>
