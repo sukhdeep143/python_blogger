@@ -42,7 +42,7 @@ Here’s a sample `README.md` file for your GitHub project [`python_blogger`](ht
 
 # 📝 Python Blogger
 
-A simple blog frontend application built using **React.js**. This project allows users to **read**, **create**, and **view blog posts**. The frontend is connected to a Python-based backend API which handles data storage and authentication.
+A simple blog frontend application built using **Next.js**. This project allows users to **read**, **create**, and **view blog posts**. The frontend is connected to a Python-based backend API which handles data storage and authentication.
 
 👉 **Live demo**: [make-your-thoughts-heard.netlify.app](https://make-your-thoughts-heard.netlify.app/)
 
@@ -161,4 +161,3 @@ If you like this project, consider starring ⭐ it on GitHub and giving feedback
 
 ---
 
-Let me know if you'd like me to create a README for your backend repo as well.
